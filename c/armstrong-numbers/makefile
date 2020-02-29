@@ -17,8 +17,15 @@ ASANFLAGS  = -fsanitize=address
 ASANFLAGS += -fno-common
 ASANFLAGS += -fno-omit-frame-pointer
 
+.PHONY: all
+
+all: armstrong_numbers.out
+
 test: tests.out
 	@./tests.out
+
+%.out: src/%.c
+	$(CC) $(ASANFLAGS) $(CFLAGS) -o out/$@ $< $(LIBS)
 
 memcheck: test/*.c src/*.c src/*.h
 	@echo Compiling $@

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "darts.h"
 
-#define COMPILE_NO_EXERCISM_TEST 0
 #define DEBUG 0
 
 #if COMPILE_NO_EXERCISM_TEST == 1

@@ -1,5 +1,12 @@
 #include "resistor_color.h"
 
+#if COMPILE_NO_EXERCISM_TEST == 1
+int main(void)
+{
+	return 0;
+}
+#endif // COMPILE_NO_EXERCISM_TEST
+
 static const resistor_band_t color_values[] = { 
 	BLACK, BROWN, RED, ORANGE, YELLOW,
 	GREEN, BLUE, VIOLET, GREY, WHITE, COLOR_ERROR

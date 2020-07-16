@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include "armstrong_numbers.h"
 
-#define COMPILE_NO_EXERCISM_TEST 0
-
 #if COMPILE_NO_EXERCISM_TEST == 1
 #define VERIFY_ARMSTRONG_N(num) (printf("%d is : %s\n", (num), (is_armstrong_number((num))  ? "false" : "true" )))
 int

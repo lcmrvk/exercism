@@ -3,6 +3,9 @@
 
 #include <stdbool.h>
 
-bool is_isogram(const char phrase[]);
+#define ALPHABET_SIZE 26
+#define ALPHABET_POSOTION(c) (tolower(c) - 'a')
 
-#endif
+bool is_isogram(const char *phrase);
+
+#endif // ISOGRAM_H
